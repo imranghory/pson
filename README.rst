@@ -91,3 +91,8 @@ How does it handle missing values ?
 Installation
 ------------
 TBD
+
+Authors
+------------
+
+Built by Imran Ghory (@imranghory). Released under the MIT Licence. Contributions welcome via Github.
