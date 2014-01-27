@@ -5,7 +5,7 @@ Python library to make querying JSON-like structures easy!
 
 With the explosion of APIs returning JSON the use of JSON like structures (i.e what you get if you take JSON and run it through JSON.loads()) querying these types of structures is a common need.
 
-Most people either manually traverse the structures or write their own querying logic, this library aims to solve that need by providing a general purpose querying utils. It uses the dot notation to traverse structures in a similar fashion to document databases such as MongoDB.
+Most people either manually traverse the structures or write their own querying logic, this library aims to solve that need by providing a general purpose querying library. It uses the dot notation to traverse structures in a similar fashion to document databases such as MongoDB.
 
 Examples
 --------
