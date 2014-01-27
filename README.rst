@@ -1,5 +1,5 @@
-pson
-====
+pson: Python Querying for JSON 
+===============================
 
 Python library to make querying JSON-like structures easy!
 
@@ -90,7 +90,11 @@ How does it handle missing values ?
 
 Installation
 ------------
-TBD
+To install pson, simply:
+
+.. code-block:: bash
+
+    $ pip install pson
 
 Authors
 ------------
