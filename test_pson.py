@@ -30,5 +30,13 @@ class PsonTestCase(unittest.TestCase):
                 u'symbols & personifications', u'objects']
         self.assertEqual(set(tags), set(expectedtags))
 
+    def test_array_index_out_of_bounds(self):
+        invalid_data = pq(self.jsondata, "contributors.3.birthYear")
+        self.assertEqual(invalid_data, None)
+
+    def test_unexistent_index_in_json(self):
+        url = pq(self.jsondata,"foo")
+        self.assertEqual(url, None)
+
 if __name__ == '__main__':
     unittest.main()

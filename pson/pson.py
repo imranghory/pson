@@ -5,7 +5,7 @@ def pathparser(path, separator="."):
     return path.split(separator)
 
 def pathquery(pson, path, separator=".", missing=None, iterate=True):
-    if isinstance(path,str) or isinstance(path, unicode):
+    if isinstance(path, str) or isinstance(path, unicode):
         path = pathparser(path, separator=separator)
 
     counter = 0
@@ -17,7 +17,7 @@ def pathquery(pson, path, separator=".", missing=None, iterate=True):
             # if we hit an array see if the token is a number else assume we
             # want the rest of the path applied to every element in the array
             try:
-                if int(token)<len(pson):
+                if int(token) < len(pson):
                     pson = pson[int(token)]
                 else: #handle a number longer than list len
                     return missing
