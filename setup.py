@@ -10,16 +10,10 @@ import pson
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-def read(*filenames, **kwargs):
-    encoding = kwargs.get('encoding', 'utf-8')
-    sep = kwargs.get('sep', '\n')
-    buf = []
-    for filename in filenames:
-        with io.open(filename, encoding=encoding) as f:
-            buf.append(f.read())
-    return sep.join(buf)
 
-long_description = read('README.rst')
+with open('README.rst') as f:
+    long_description = f.read()
+
 
 class PyTest(TestCommand):
     def finalize_options(self):
@@ -46,8 +40,9 @@ setup(
     long_description=long_description,
     packages=['pson'],
     include_package_data=True,
+
     platforms='any',
-    test_suite='pson.test_pson',
+    test_suite='test_pson',
     classifiers = [
         'Programming Language :: Python',
         'Development Status :: 4 - Beta',
